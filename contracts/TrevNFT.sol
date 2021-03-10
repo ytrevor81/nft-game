@@ -19,5 +19,5 @@ contract TrevNFT is Ownable, ERC721 {
         _setTokenURI(newNftTokenId, tokenURI);
 
         return newNftTokenId;
-    }
+    }    
 }
