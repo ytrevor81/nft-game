@@ -9,13 +9,13 @@ contract('TrevNFTFinal', function(accounts) {
   it('Contract deployed', function() {
     return TrevNFTFinal.deployed().then(function(instance) {
       tokenInstance = instance;
-      return tokenInstance.mintNft("0x3454000e91eb384f6F113A9F11ec41CD94CeF4f1", config.METADATA)
-    }).then(function(receipt) {
-      const tokenId = receipt.logs[0].args.tokenId;
-      assert.equal(tokenId, 1, "minted");
-      return tokenInstance.tokenURI(tokenId)
+      return tokenInstance.tokenURI(1)
+      //return tokenInstance.mintNft("0x3454000e91eb384f6F113A9F11ec41CD94CeF4f1", config.METADATA)
     }).then(function(uri) {
       assert.equal(uri, config.METADATA, "correct uri");
+      return tokenInstance.ownerOf(1);
+    }).then(function(address) {
+      assert.equal(address, "0x3454000e91eb384f6F113A9F11ec41CD94CeF4f1", "correct owner");
     });
   });
 
