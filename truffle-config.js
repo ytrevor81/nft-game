@@ -15,7 +15,7 @@ module.exports = {
     rinkeby: {
       provider: function() {
         return new HDWalletProvider(
-          privateKeys.split(','),
+          config.RINKEBY_SECRET_KEY,
           `https://rinkeby.infura.io/v3/${config.INFURA_API_KEY}`// Url to an Ethereum Node
         )
       },

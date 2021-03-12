@@ -1,35 +1,22 @@
-const TrevNFT = artifacts.require("TrevNFT")
+const TrevNFTFinal = artifacts.require("TrevNFTFinal")
 const config = require('../config.json')
 
-contract('TrevNFT', function(accounts) {
+contract('TrevNFTFinal', function(accounts) {
   var tokenInstance;
   var tokenId;
   var json;
 
   it('Contract deployed', function() {
-    return TrevNFT.deployed().then(function(instance) {
+    return TrevNFTFinal.deployed().then(function(instance) {
       tokenInstance = instance;
-      return tokenInstance.name();
-    }).then(function(name) {
-      assert.equal(name, "Trev NFT", "has the correct name");
-    });
-  });
-
-  it('applying URI', function() {
-    return TrevNFT.deployed().then(function(instance) {
-      tokenInstance = instance;
-      return tokenInstance.mintNft(accounts[0], config.METADATA);
+      return tokenInstance.mintNft("0x3454000e91eb384f6F113A9F11ec41CD94CeF4f1", config.METADATA)
     }).then(function(receipt) {
-      tokenId = receipt.logs[0].args.tokenId;
-      assert.equal(tokenId, 1, "function was called");
-      return tokenInstance.tokenURI(tokenId);
-    }).then(function(jsonURI) {
-      json = jsonURI;
-      assert.equal(json.toString(), config.METADATA, "has the correct NFT URI");
-      return tokenInstance.ownerOf(tokenId);
-    }).then(function(address) {
-      assert.equal(address, accounts[0], "correct address");
-    })
+      const tokenId = receipt.logs[0].args.tokenId;
+      assert.equal(tokenId, 1, "minted");
+      return tokenInstance.tokenURI(tokenId)
+    }).then(function(uri) {
+      assert.equal(uri, config.METADATA, "correct uri");
+    });
   });
 
 });
