@@ -1,0 +1,19 @@
+{
+    "name": "Heracross NFT",
+    "description": "This a test NFT created by Trevor Youngquist",
+    "image": "https://ipfs.io/ipfs/QmXxKxpShFVJoQ587za8US6ci5edNZcXdk2xvtrVehyJFq",
+    "attributes": [
+        {
+            "trait_type": "Type",
+            "value": "Bug/Fighting"
+        },
+        {
+            "trait_type": "Generation",
+            "value": "II"
+        },
+        {
+            "trait_type": "PokeDex Number",
+            "value": 214
+        }
+    ]
+}

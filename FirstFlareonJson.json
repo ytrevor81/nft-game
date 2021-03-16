@@ -1,0 +1,22 @@
+{
+    "title": "Non-Fungible Flareon Metadata",
+    "type": "object",
+    "properties": {
+      "name": {
+        "type": "string",
+        "description": "Non-Fungible Flareon"
+      },
+      "description": {
+        "type": "string",
+        "description": "A new take of Flareon, brought to you by Squid Shock Studios"
+      },
+      "image": {
+        "type": "string",
+        "description": "A new take of Flareon, brought to you by Squid Shock Studios"
+      },
+      "type": {
+        "type": "string",
+        "description": "Fire"
+      },
+    }
+}
