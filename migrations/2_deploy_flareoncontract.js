@@ -4,6 +4,6 @@ const config = require('../config.json');
 module.exports = async function(deployer) {
   await deployer.deploy(Flareon);
   const nft = await Flareon.deployed();
-  await nft.mintNft(config.RINKEBY_ADDRESS, config.FLAREON_METADATA);
-  //await nft.mintNft("0x60dE7547089bD529c7d04E6D0c6A73E99939105f", config.FLAREON_METADATA); //Ganache address
+  //await nft.mintNft(config.RINKEBY_ADDRESS, config.FLAREON_METADATA);
+  await nft.mintNft("0x361eccb8E577800Aa2d60994773dE975E28a68CE", config.FLAREON_METADATA); //Ganache address
 };

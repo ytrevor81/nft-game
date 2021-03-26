@@ -9,7 +9,7 @@ contract NonFungibleFlareon is Ownable, ERC721 {
   using Counters for Counters.Counter;
     Counters.Counter private _tokenIds;
 
-    constructor() ERC721("Flareon CC Fresh", "FCC") {
+    constructor() ERC721("Non-Fungible Flareon", "NFF") {
     }
 
     function mintNft(address receiver, string memory tokenURI) external onlyOwner returns (uint256) {

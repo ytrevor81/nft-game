@@ -1,0 +1,19 @@
+{
+  "name": "Non-Fungible Flareon",
+  "description": "This a test NFT created by Trevor Youngquist",
+  "image": "https://ipfs.io/ipfs/Qme9Qr1NCE4SbJfAGyBwaCvPN1yVyVVMSA9TTshdepqKk1",
+  "attributes": [
+      {
+          "trait_type": "Pokemon Type",
+          "value": "Fire"
+      },
+      {
+          "trait_type": "Generation",
+          "value": "I"
+      },
+      {
+          "trait_type": "PokeDex Number",
+          "value": 136
+      }
+  ]
+}
