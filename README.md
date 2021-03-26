@@ -7,7 +7,7 @@ Contract address link on Etherscan: https://rinkeby.etherscan.io/address/0xD4dE1
 NFT address on OpenSea: https://testnets.opensea.io/assets/0xd4de12a1c3224c68cb908c1ba3d63e49520f881c/1
 
 ## Technologies
-Solidity (Smart Contracts) | Javascript | Truffle | Ganache | IPFS | Rinkeby | Infura API
+Solidity (Smart Contracts)  |  Javascript  |  Truffle  |  Ganache  |  IPFS  |  Rinkeby  |  Infura API
 
 ## NFT Art
 
